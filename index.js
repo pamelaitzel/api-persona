@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Permitir todas las solicitudes de origen
 
-const PORT = 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log("servidor corriendo en http://localhost:" + PORT);
 });
